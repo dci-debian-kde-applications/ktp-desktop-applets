@@ -15,7 +15,7 @@ License: GPL-2+
 Files: contact/src/contact-delegate*
        contact/src/abstract-contact-delegate.*
        50-renameKTpApplets.js
-Copyright: 2013 Dan Vrátil <dvratil@redhat.com> 
+Copyright: 2013 Dan Vrátil <dvratil@redhat.com>
            2011 Martin Klapetek <martin.klapetek@gmail.com>
            2012 Dominik Cermak <d.cermak@arcor.de>
 License: LGPL-2.1+
