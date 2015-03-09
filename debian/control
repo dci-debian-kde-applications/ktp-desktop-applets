@@ -10,7 +10,8 @@ Build-Depends: cmake,
                extra-cmake-modules,
                libkf5package-dev,
                pkg-kde-tools (>> 0.15.15),
-               plasma-framework-dev
+               plasma-framework-dev,
+               qtdeclarative5-dev
 Standards-Version: 3.9.5
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-desktop-applets
 Vcs-Git: git://anonscm.debian.org/pkg-kde/applications/ktp-desktop-applets.git
