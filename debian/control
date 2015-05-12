@@ -20,7 +20,11 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/applications/ktp-deskto
 
 Package: kde-telepathy-desktop-applets
 Architecture: any
-Depends: qml-module-org-kde-telepathy, ${misc:Depends}, ${shlibs:Depends}
+Depends: plasma-framework,
+         qml-module-org-kde-people,
+         qml-module-org-kde-telepathy,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: kde-telepathy-legacy-presence-applet
 Replaces: kde-telepathy-legacy-presence-applet
 Description: KDE Telepathy contact plasmoid
