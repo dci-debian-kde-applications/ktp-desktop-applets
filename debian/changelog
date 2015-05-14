@@ -1,8 +1,12 @@
-ktp-desktop-applets (15.04.0-0ubuntu1) UNRELEASED; urgency=medium
+ktp-desktop-applets (4:15.04.1-0ubuntu1) UNRELEASED; urgency=medium
 
+  [ Harald Sitter ]
   * KDE Frameworks 5 port
 
- -- Harald Sitter <sitter@kde.org>  Fri, 06 Mar 2015 13:56:19 +0100
+  [ Scarlett Clark ]
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 13 May 2015 22:37:28 -0700
 
 ktp-desktop-applets (0.9.0-0ubuntu1) vivid; urgency=medium
 
