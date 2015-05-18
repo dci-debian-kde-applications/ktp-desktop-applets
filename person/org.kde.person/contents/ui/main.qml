@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011 by Francesco Nwokeka <francesco.nwokeka@gmail.com> *
+ *   Copyright (C) 2014 by Aleix Pol Gonzalez <aleixpol@blue-systems.com>  *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -14,42 +14,24 @@
  *   You should have received a copy of the GNU General Public License     *
  *   along with this program; if not, write to the                         *
  *   Free Software Foundation, Inc.,                                       *
- *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA            *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.1
+import QtQuick 2.4
+import QtQuick.Layouts 1.1
+
+import org.kde.people 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.graphicswidgets 0.1 as PlasmaWidgets
+import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.plasmoid 2.0
 
 Item {
-    id: label;
+    id: main
 
-    // this property holds which side the label is to be viewed. Default is left
-    // and changes when user changes screen edge from settings ui.
-    property string orientation: "left";
-    signal orientationChanged();
-    property QtObject theme: PlasmaCore.Theme {}
+    Plasmoid.switchWidth: units.gridUnit * 4
+    Plasmoid.switchHeight: units.gridUnit * 4
 
-    PlasmaWidgets.IconWidget {
-        id: labelIcon;
-        icon: QIcon("kde-telepathy");
-        drawBackground: false;
-        text: i18n("ContactList");
-        orientation: QtHorizontal;
-        textBackgroundColor: theme.backgroundColor;
-        anchors.fill: parent;
-    }
+    Plasmoid.compactRepresentation: Person {}
+    Plasmoid.fullRepresentation: Person {}
 
-    function setOrientation(newOrientation)
-    {
-        if (newOrientation == "left"
-                || newOrientation == "right"
-                || newOrientation == "bottom"
-                || newOrientation == "top") {
-            label.orientation = newOrientation;
-            label.orientationChanged();
-        } else {
-            console.log("CAN'T SET FAILED ORIENTATION!");
-        }
-    }
 }

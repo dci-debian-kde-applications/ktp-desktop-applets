@@ -1,7 +1,6 @@
 /*
-    Copyright (C) 2012  Lasath Fernando <kde@lasath.org>
-    Copyright (C) 2012 David Edmundson <kde@davidedmundson.co.uk>
-    
+    Copyright (C) 2013  Aleix Pol Gonzalez <aleixpol@kde.org>
+
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
     License as published by the Free Software Foundation; either
@@ -17,13 +16,21 @@
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-import QtQuick 2.1
+#include <QQmlExtensionPlugin>
+#include <qqml.h>
+#include "hide-window-component.h"
 
-TextDelegate {
-    Rectangle {
-        color: theme.viewBackgroundColor
-        anchors.fill: parent
-        z: parent.z-1
-        opacity: 0.7
-    }
-}
+class QmlPlugins : public QQmlExtensionPlugin
+{
+    Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface")
+
+    public:
+        virtual void initializeEngine(QQmlEngine */*engine*/, const char */*uri*/) {}
+        virtual void registerTypes(const char *uri) {
+            qmlRegisterType<HideWindowComponent>(uri, 0, 1, "HideWindowComponent");
+        }
+
+};
+
+#include "qmlplugin.moc"

@@ -1,7 +1,6 @@
 /*
-    Copyright (C) 2012  Lasath Fernando <kde@lasath.org>
-    Copyright (C) 2012 David Edmundson <kde@davidedmundson.co.uk>
-    
+    Copyright (C) 2012 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
+
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
     License as published by the Free Software Foundation; either
@@ -17,13 +16,23 @@
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-import QtQuick 2.1
+#ifndef HIDEWINDOWCOMPONENT_H
+#define HIDEWINDOWCOMPONENT_H
 
-TextDelegate {
-    Rectangle {
-        color: theme.viewBackgroundColor
-        anchors.fill: parent
-        z: parent.z-1
-        opacity: 0.7
-    }
-}
+#include <QObject>
+
+/**
+ * Plasma is not exposing such a feature to make its dialogs hidden from the taskbar,
+ * that's why we added that weird object
+ */
+
+class HideWindowComponent : public QObject
+{
+    Q_OBJECT
+  public:
+    explicit HideWindowComponent(QObject *parent = 0);
+
+    Q_SCRIPTABLE void hideWindowFromTaskbar(qulonglong winId);
+};
+
+#endif // HIDEWINDOWCOMPONENT_H
