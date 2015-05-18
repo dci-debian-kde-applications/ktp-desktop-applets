@@ -1,9 +1,13 @@
 ktp-desktop-applets (0.8.80-1) UNRELEASED; urgency=medium
 
+  [ Diane Trout ]
   * New upstream release.
   * Update copyright file.
   * Update build-depends for libktpcommoninternalsprivate-dev to 0.8.80
   * Update depends for kde-telepathy-declarative to source:Upstream-Version
+
+  [ Maximiliano Curia ]
+  * Update watch file.
 
  -- Diane Trout <diane@ghic.org>  Sat, 20 Sep 2014 20:41:41 -0700
 
