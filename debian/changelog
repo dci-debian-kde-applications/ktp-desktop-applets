@@ -9,7 +9,7 @@ ktp-desktop-applets (4:15.04.2-0ubuntu1) wily; urgency=medium
   [ Jonathan Riddell ]
   * New upstream release
 
- -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 09 Jun 2015 19:29:51 +0200
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 10 Jun 2015 18:58:32 +0200
 
 ktp-desktop-applets (0.9.0-0ubuntu1) vivid; urgency=medium
 
