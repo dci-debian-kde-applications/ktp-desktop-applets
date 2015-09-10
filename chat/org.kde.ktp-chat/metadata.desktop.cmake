@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Quick Chat
+Name[ar]=محادثة سريعة
 Name[ast]=Charra rápida
 Name[bs]=Brzo ćaskanje
 Name[ca]=Xat ràpid
@@ -44,6 +45,7 @@ Name[x-test]=xxQuick Chatxx
 Name[zh_CN]=快捷聊天
 Name[zh_TW]=快速聊天
 Comment=Simple chats from your workspace
+Comment[ar]=محادثات بسيطة من مساحة العمل
 Comment[ast]=Charres simples dende la to estaya de trabayu
 Comment[bs]=Prosta ćaskanja iz radnog prostora
 Comment[ca]=Xats normals des de l'espai de treball
@@ -51,7 +53,7 @@ Comment[ca@valencia]=Xats normals des de l'espai de treball
 Comment[cs]=Jednoduché rozhovory z vaší pracovní plochy
 Comment[da]=Simple chats fra dit arbejdsområde
 Comment[de]=Einfache Chats von Ihrer Arbeitsfläche
-Comment[el]=Απλές συνομιλίες από το χώρο εργασίας σας
+Comment[el]=Απλές συνομιλίες από τον χώρο εργασίας σας
 Comment[en_GB]=Simple chats from your workspace
 Comment[es]=Charlas rápidas desde el espacio de trabajo
 Comment[et]=Lihtne vestlus otse töölaualt

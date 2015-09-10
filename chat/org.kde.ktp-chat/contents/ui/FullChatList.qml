@@ -58,6 +58,7 @@ Grid {
     }
 
     function closeAllConversations() {
+        base.currentIndex = -1
         conversationsModel.closeAllConversations()
     }
 
@@ -92,14 +93,12 @@ Grid {
             width: base.itemWidth
             height: base.itemHeight
             onClicked: {
-                telepathyManager.startChat(account, contact, "org.freedesktop.Telepathy.Client.KTp.chatPlasmoid")
+                telepathyManager.startChat(account, contact, "org.freedesktop.Telepathy.Client.KTp.ChatPlasmoid")
             }
             avatar: decoration
-            overlay: ExtraComponents.QIconItem {
-                    anchors.fill: parent
-                    anchors.margins: parent.width/3
-                    icon: presenceIcon
-                }
+            title: display
+            overlay: PlasmaCore.IconItem { source: "rating" }
+            presenceIcon: model.presenceIcon
             account: model.account
             contact: model.contact
         }
@@ -107,7 +106,6 @@ Grid {
             sourceModel: KTp.PinnedContactsModel {
                 id: pinnedModel
                 conversations: conversationsModel
-                accountManager: telepathyManager.accountManager
 
                 Component.onCompleted: {
                     state = plasmoid.configuration.pinnedContacts
