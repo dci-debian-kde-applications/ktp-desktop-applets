@@ -1,4 +1,4 @@
-ktp-desktop-applets (15.12.0-1~) UNRELEASED; urgency=medium
+ktp-desktop-applets (15.12.1-1~) UNRELEASED; urgency=medium
 
   [ Diane Trout ]
   * New upstream release.
@@ -17,8 +17,9 @@ ktp-desktop-applets (15.12.0-1~) UNRELEASED; urgency=medium
   * New upstream release (15.08.2).
   * New upstream release (15.08.3).
   * New upstream release (15.12.0).
+  * New upstream release (15.12.1).
 
- -- Maximiliano Curia <maxy@debian.org>  Wed, 16 Dec 2015 16:18:31 +0100
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 29 Jan 2016 11:22:24 +0100
 
 ktp-desktop-applets (0.8.1-1) unstable; urgency=medium
 
