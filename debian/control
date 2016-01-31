@@ -1,7 +1,7 @@
 Source: ktp-desktop-applets
 Section: kde
 Priority: optional
-Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Diane Trout <diane@ghic.org>,
            Michał Zając <quintasan@kubuntu.org>,
            Mark Purcell <msp@debian.org>
@@ -9,12 +9,13 @@ Build-Depends: cmake (>= 2.8.12~),
                debhelper (>= 9),
                extra-cmake-modules (>= 0.0.11~),
                libkf5windowsystem-dev,
-               libtelepathy-qt4-dev (>= 0.9.1),
+               libktp-dev (>= 15.04),
+               libtelepathy-qt5-dev (>= 0.9.1),
                pkg-kde-tools (>= 0.9),
                plasma-framework-dev,
                qtdeclarative5-dev (>= 5.4)
 Standards-Version: 3.9.6
-Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-desktop-applets
+Homepage: https://projects.kde.org/projects/kde/kdenetwork/ktp-desktop-applets
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-desktop-applets.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepathy/ktp-desktop-applets.git
 
@@ -23,7 +24,7 @@ Architecture: any
 Replaces: ktp-telepathy-contact-list (<= 0.6.1-1),
           plasma-widget-telepathy-chat (<= 0.6.1-1),
           plasma-widget-telepathy-presence (<= 0.6.1-1)
-Depends: kde-telepathy-declarative (>= ${source:Upstream-Version}),
+Depends: qml-module-org-kde-telepathy (>= ${source:Upstream-Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Description: KDE Telepathy contact plasmoid

@@ -7,85 +7,19 @@ License: GPL-2+
 Files: *
 Copyright: 2011 Francesco Nwokeka <francesco.nwokeka@gmail.com>
            2012 David Edmundson <kde@davidedmundson.co.uk>
-           2012  Lasath Fernando <kde@lasath.org>
+           2012 Lasath Fernando <kde@lasath.org>
            2012 Aleix Pol <aleixpol@kde.org>
-License: GPL-2+
-
-
-Files: contact/src/contact-delegate*
-       contact/src/abstract-contact-delegate.*
-       50-renameKTpApplets.js
-Copyright: 2013 Dan Vrátil <dvratil@redhat.com> 
-           2011 Martin Klapetek <martin.klapetek@gmail.com>
-           2012 Dominik Cermak <d.cermak@arcor.de>
 License: LGPL-2.1+
 
+Files: chat/org.kde.ktp-chat/contents/ui/main.qml
+       person/org.kde.person/contents/ui/*.qml
+Copyright:  2011 Francesco Nwokeka <francesco.nwokeka@gmail.com>
+            2014 Aleix Pol Gonzalez <aleixpol@kde.org>
+License: GPL-2+
 
 Files: cmake/*
 Copyright: 2011 Dario Freddi <drf@kde.org>
 License: BSD-3-clause
-
-Files: po/*
-Copyright: 2012 Adrian Chaves Fernandez <adriyetichaves@gmail.com>
-           2013 Alexander Lakhin <exclusion@gmail.com>
-           2013 Andrej Mernik <andrejm@ubuntu.si>
-           2014 Andrej Mernik <andrejm@ubuntu.si>
-           2012 Andrej Vernekar <andrej.vernekar@gmail.com>
-           2013-2014 André Marcelo Alvarenga <alvarenga@kde.org>
-           2012-2014 Balázs Úr <urbalazs@gmail.com>
-           2012-2014 Bjørn Steensrud <bjornst@skogkatt.homelinux.org>
-           2011-2014 Burkhard Lück <lueck@hube-lueck.de>
-           2013 Chetan Khona <chetan@kompkin.com>
-           2013-2014 Chusslove Illich <caslav.ilic@gmx.net>
-           2012, 2014 Dimitris Kardarakos <dimkard@gmail.com>
-           2012-2014 Eloy Cuadra <ecuadra@eloihr.net>
-           2012-2014 Franklin Weng <franklin@mail.everfocus.com.tw>
-           2012 Frederik Schwarzer <schwarzer@kde.org>
-           2013-2014 Freek de Kruijf <freekdekruijf@kde.nl>
-           2013-2014 Giovanni Sora <g.sora@tiscali.it>
-           2013 Jean Cayron <jean.cayron@base.be>
-           2013 Joëlle Cornavin <jcorn@free.fr>
-           2011 Kevin Scannell <kscanne@gmail.com>
-           2012 Khoem Sokhem <khoemsokhem@khmeros.info>
-           2011 Kira J. Fernández <kirajfdez@gmail.com>
-           2012 Kristóf Kiszel <ulysses@kubuntu.org>
-           2013-2014 Lasse Liehu <lasse.liehu@gmail.com>
-           2012 Lê Hoàng Phương <herophuong93@gmail.com>
-           2012-2014 Liudas Ališauskas <liudas.alisauskas@gmail.com>
-           2012-2014 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
-           2011 Manfred Wiese <m.j.wiese@web.de>
-           2013 Marce Villarino <mvillarino@kde-espana.es>
-           2012, 2014 Marek Laane <bald@smail.ee>
-           2011-2014 Martin Schlander <mschlander@opensuse.org>
-           2013 Miguel Branco <mgl.branco@gmail.com>
-           2012 Ni Hui <shuizhuyuanluo@126.com>
-           2014 Park Shinjo <peremen@gmail.com>
-           2011-2013 Pino Toscano <toscano.pino@tiscali.it>
-           2012-2013 Raul Gonzalez <raulgf83@gmail.com>
-           2012 Richard Frič <Richard.Fric@kdemail.net>
-           2012 Rosetta Contributors and Canonical Ltd
-           2012-2014 Roman Paholik <wizzardsk@gmail.com>
-           2013 Sairan Kikkarin <sairan@computer.org>
-           2012-2014 Sergiu Bivol <sergiu@ase.md>
-           2011-2014 Stefan Asserhall <stefan.asserhall@bredband.net>
-           2012 Stelios <sstavra@gmail.com>
-           2012 Tommi Nieminen <translator@legisign.org>
-           2013-2014 Vit Pelcak <vit@pelcak.org>
-           2013 Volkan Gezer <volkangezer@gmail.com>
-           2012-2013 Weng Xuetian <wengxt@gmail.com>
-           2013-2014 xavier <xavier.besnard@neuf.fr>
-           2012 Xosé <xosecalvo@gmail.com>
-           2013 Yuri Chornoivan <yurchor@ukr.net>
-           2013-2014 Yuri Chornoivan <yurchor@ukr.net>
-           2012-2013 Yuri Efremov <yur.arh@gmail.com>
-           2014 Steve Allewell <steve.allewell@gmail.com>
-           2014 Sönke Dibbern <s_dibbern@web.de>
-License: GPL-2+
-
-Files: po/ca/plasma_applet_org.kde.ktp-*.po
-       po/ca@valencia/plasma_applet_org.kde.ktp-*.po
-Copyright: 2012-2014 Josep Ma. Ferrer <txemaq@gmail.com>
-License: KDE-LGPL-2.1+
 
 License: GPL-2+
     This package is free software; you can redistribute it and/or modify
@@ -145,23 +79,3 @@ License: BSD-3-clause
    THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
    THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-License: KDE-LGPL-2.1+
-   This library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) version 3, or any
-   later version accepted by the membership of KDE e.V. (or its
-   successor approved by the membership of KDE e.V.), which shall
-   act as a proxy defined in Section 6 of version 3 of the license.
-   .
-   This library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-   .
-   You should have received a copy of the GNU Lesser General Public
-   License along with this library.  If not, see <http://www.gnu.org/licenses/>.
-   .
-   On Debian systems, the complete text of the GNU Lesser General
-   Public License v2.1 can be found in `/usr/share/common-licenses/LGPL-2.1'.
