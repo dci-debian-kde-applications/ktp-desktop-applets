@@ -1,44 +1,35 @@
 Source: ktp-desktop-applets
 Section: kde
 Priority: optional
-Maintainer: Debian/Kubuntu KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Diane Trout <diane@ghic.org>,
            Michał Zając <quintasan@kubuntu.org>,
            Mark Purcell <msp@debian.org>
-Build-Depends: cmake,
+Build-Depends: cmake (>= 2.8.12~),
                debhelper (>= 9),
-               extra-cmake-modules,
-               libkf5package-dev,
+               extra-cmake-modules (>= 0.0.11~),
                libkf5windowsystem-dev,
-               pkg-kde-tools (>> 0.15.15),
+               libktp-dev (>= 15.04),
+               libtelepathy-qt5-dev (>= 0.9.1),
+               pkg-kde-tools (>= 0.9),
                plasma-framework-dev,
-               qtdeclarative5-dev
+               qtdeclarative5-dev (>= 5.4)
 Standards-Version: 3.9.6
-Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-desktop-applets
-Vcs-Git: git://anonscm.debian.org/pkg-kde/applications/ktp-desktop-applets.git
-Vcs-Browser: http://anonscm.debian.org/cgit/pkg-kde/applications/ktp-desktop-applets.git
+Homepage: https://projects.kde.org/projects/kde/kdenetwork/ktp-desktop-applets
+Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-desktop-applets.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepathy/ktp-desktop-applets.git
 
 Package: kde-telepathy-desktop-applets
 Architecture: any
-Depends: plasma-framework,
-         qml-module-org-kde-people,
-         qml-module-org-kde-telepathy,
+Replaces: ktp-telepathy-contact-list (<= 0.6.1-1),
+          plasma-widget-telepathy-chat (<= 0.6.1-1),
+          plasma-widget-telepathy-presence (<= 0.6.1-1)
+Depends: qml-module-org-kde-telepathy (>= ${source:Upstream-Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Breaks: kde-telepathy-legacy-presence-applet
-Replaces: kde-telepathy-legacy-presence-applet
 Description: KDE Telepathy contact plasmoid
  This package provides widgets that allow you to have any
  of your IM contacts easily accessible as an icon on your desktop.
  .
  This package is not meant to be used standalone. It is recommended
  to install the kde-telepathy metapackage instead.
-
-Package: kde-telepathy-desktop-applets-dbg
-Architecture: any
-Section: debug
-Priority: extra
-Depends: kde-telepathy-desktop-applets (= ${binary:Version}), ${misc:Depends}
-Description: KDE Telepathy contact plasmoid - debug symbols
- This package provides the debug symbols for the KDE Telepathy contact,
- chat, and presence plasmoids.
