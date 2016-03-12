@@ -9,7 +9,7 @@ Build-Depends: cmake (>= 2.8.12~),
                debhelper (>= 9),
                extra-cmake-modules (>= 0.0.11~),
                libkf5windowsystem-dev,
-               libktp-dev (>= 15.04),
+               libktp-dev (>= 4:15.12.2),
                libtelepathy-qt5-dev (>= 0.9.1),
                pkg-kde-tools (>= 0.9),
                plasma-framework-dev,
@@ -21,7 +21,7 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepath
 
 Package: kde-telepathy-desktop-applets
 Architecture: any
-Replaces: ktp-telepathy-contact-list (<= 0.6.1-1),
+Replaces: ktp-telepathy-contact-list (>= 4:15.12.2),
           plasma-widget-telepathy-chat (<= 0.6.1-1),
           plasma-widget-telepathy-presence (<= 0.6.1-1)
 Depends: qml-module-org-kde-telepathy (>= ${source:Upstream-Version}),
