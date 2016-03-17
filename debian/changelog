@@ -1,9 +1,10 @@
-ktp-desktop-applets (4:15.12.2-0ubuntu1) UNRELEASED; urgency=medium
+ktp-desktop-applets (4:15.12.3-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream bugfix release
   * Bump ktp* dependency versions. 
+  * New upstream bugfix release
 
- -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 09 Mar 2016 22:12:43 -0800
+ -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 16 Mar 2016 20:26:31 -0700
 
 ktp-desktop-applets (4:15.12.1-1ubuntu1) xenial; urgency=medium
 
