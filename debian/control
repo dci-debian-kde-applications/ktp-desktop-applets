@@ -16,8 +16,8 @@ Build-Depends: cmake (>= 2.8.12~),
                qtdeclarative5-dev (>= 5.4)
 Standards-Version: 3.9.6
 Homepage: https://projects.kde.org/projects/kde/kdenetwork/ktp-desktop-applets
-Vcs-Git: https://anonscm.debian.org/git/pkg-kde/kde-extras/kde-telepathy/ktp-desktop-applets.git
-Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/kde-extras/kde-telepathy/ktp-desktop-applets.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-kde/applications/ktp-desktop-applets.git
+Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/applications/ktp-desktop-applets.git
 
 Package: kde-telepathy-desktop-applets
 Architecture: any
