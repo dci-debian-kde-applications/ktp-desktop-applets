@@ -1,8 +1,970 @@
-ktp-desktop-applets (15.12.2-1~) UNRELEASED; urgency=medium
+ktp-desktop-applets (15.12.3-1~1.gbpffeb33) UNRELEASED; urgency=medium
 
+  ** SNAPSHOT build @ffeb33700ed36523f0889c42ec9dcbce42d96cca **
+
+  [ Maximiliano Curia ]
   * New upstream release (15.12.2).
 
- -- Maximiliano Curia <maxy@debian.org>  Sat, 13 Feb 2016 10:02:07 +0100
+  [ George Goldberg ]
+  * beginnings of an applet that displays a users online/offline status from the decibel presence dataengine
+  * Get the presence applet working again with current plasma API.
+  * Remove methods that are no longer needed.
+  * Add some colour scheme support to make it look nicer, and start to calculate the master presence state and message.
+  * Change the presence applet to use the new PresenceState and values passed, making it compatible with recent dataengine changes.
+  * Basic implementation of changing master icon. If one or more accounts are offline, it now displays the offline icon, otherwise the online icon. Needs some serious thought about when to use which icon.
+  * Use the kopete method to choose the master presence type. (Thanks Earthwings, for the tip :) ).
+  * Show the master presence icon on the main widget, not just the taskbar.
+  * Major cleanup to make the code a bit tidier and to match the decibel coding style, since that is where this applet will most likely end up when it moves out of playground. Previously there was no consistent code style, just mess...
+  * Add a label for the master presence status to be displayed.
+  * Store the master status message even when no widget exists.
+  * Use correct key to retrieve status message from engine.
+  * Set previousStatusMessage correctly so that it does not always result in there being different status messages.
+  * Make status message readable by using appropriate text colour.
+  * Stub in a custom delegate to draw each account in the presence view widget.
+  * Draw icon in view for the status type of each account.
+  * Fix presence applet to compile against latest telepathy-qt4 bindings.
+  * Fix to compile with latest tpqt4 API.
+  * Remove all tpqt4 stuff from the plasmoid - it should do stuff through the presence dataengine, not directly. It will now display the presence correctly for individual accounts.
+  * ebn fixes.
+  * Update the data source entry names to match what they now are called in the dataengine.
+  * Fix up master presence display and available state icon display.
+  * Remove old C++ files ready for a QML port.
+
+  [ Script Kiddy ]
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file, second try)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+
+  [ Anne-Marie Mahfouf ]
+  * API review: SIGNAL newSource() -> sourceAdded()
+
+  [ Davide Bettio ]
+  * API REVIEW FIX: constraintUpdated() -> constraintEvent() + protected
+
+  [ Laurent Montel ]
+  * We can use KDE4_PLASMA_LIBS here too it was not release yet it will use kde >= 4.2 => we can remove all check etc.
+
+  [ Dariusz Mikulski ]
+  * update to new Plasma API
+  * update Plasma API, change Decibel types to TelepathyQt4
+  * setup startup icon
+  * setup color role for items
+  * setup presence for account
+  * update to new Plasma API
+  * fix parent's
+  * update description
+
+  [ Siraj Razick ]
+  * Fix the icon behavior: icon now properly centers on the pannel, and responds to mouse clicks and displays the accounts list dialog
+  * use a shorter switch statement for master presence update, by making initial states false
+  * enable setting presnce \0/
+  * Fix the infinitely status changing bug with mission control
+
+  [ Andre Moreira Magalhaes ]
+  * Update telepathy presence applet to work with latest TelepathyQt4.
+
+  [ Abner Silva ]
+  * Added AccountImage widget.
+  * Added Account widget.
+  * Big plasmoid refactoring.
+  * Implemented presence status updating.
+  * Implemented changing presence support.
+  * Merge branch 'new-presence'
+  * Resizing plasmoid when attached in the desktop workspace.
+  * The plasmoid should not be passive. It must require the app focus.
+  * Resizing fixed! Updating constraints to avoid wrong sizes.
+  * Added new widget responsible for presence status and presence msg.
+  * PresenceMsg bug fixed.
+  * Implemented initial extender support.
+  * Removed presenceitemdelegate.
+  * Using the new global presence widget.
+  * Created util method to change presence.
+  * Now listening to global presence signals.
+  * Global presence engine implemented. - Updating popup icon. - Listening for accounts changes (status and msgs). - Reflecting global changes on accounts (status and msgs). - Removed useless methods. - Still need some love.
+  * Removed useless color schema.
+  * Added plasmoid's tooltip. Showing: global presence, account name and account presence status.
+  * Removed word 'Decibel' from desktop file and version++.
+  * We need to update global presence when a source is removed.
+
+  [ Daniele E. Domenichelli ]
+  * Enable presence applet to be added to the system tray
+  * Decrease KDE required version and remove unneeded dependencies
+  * Mark unused variables as Q_UNUSED
+  * Add file .reviewboardrc
+  * Port to the updated AccountsFilterModel
+  * Update FindKTp.cmake
+  * Add .gitignore file
+  * Port to the new ContactsModel
+  * Port to the new ContactsModel
+  * Fix build
+  * Fix build (cherry picked from commit 5d4d41f84b606aed702b32baa168246b0956658d)
+  * Fix .reviewboardrc file
+  * Add "Send a File..." action to presence applet
+  * Use the same icon as the contact list for "Join Chat Room" action
+
+  [ Francesco Nwokeka ]
+  * ADD CMakeLists file for installation to KDE system
+  * ADD contactlist and account manager launchers
+  * Changed the method to check if kde-telepathy-contactlist is installed
+  * First layout
+  * Add listview to test models from plugin
+  * Fix: load nepomuk contacts
+  * FIX: desktop files
+  * ADD contact list with grid and list view
+  * ADD gridview to plasmoid
+  * ADD: toolbar with buttons to switch view
+  * First commit
+  * ADD frames
+  * Ported the plasmoid from pure QML to C++
+  * ADD: custom config dialog
+  * App now links against ktelepathy lib
+  * Config list shows contacts from ktelepathy nepomuk
+  * Using telepathy models (martin)
+  * Plasmoid should now install files in correct places
+  * ADD item delegate for the tree view (taken from contactlist)
+  * Enabled setting of contact to keep trace of
+  * FIX size issue with plasmoid + added plasmoid icon
+  * Made QML comunicate with C++
+  * Connected contact signals to QML
+  * ADD action buttons for contact
+  * Prepared signals for default actions (chat, mail, call)
+  * Connected the "startTextChat" signal.
+  * ADD send mail action
+  * ADD video and file transfer buttons + FIX send mail bug
+  * Now actions are enabled according to user + contact capabilities
+  * CMake fix
+  * Made C++ backend for the plasmoid.
+  * Made listview good looking
+  * ADD delegate for gridview and made a descriptive status bar
+  * When an action is chosen, drop down menu dissapears
+  * Plasmoid loads and saves config
+  * Plasmoid saves and loads plasmoid settings
+  * FIX plasmoid now is disabled/enabled when user account goes online/offline
+  * FIX config saving
+  * Merge branches 'master' and 'telepathymodel'
+  * FIX on reboot plasmoid now reconnects to specified contactPtr
+  * Renamed source code files to match naming convention
+  * Config dialog tidy up
+  * No need to save config immediatly after a load Reviewer: David Edmundson
+  * Move accountManagerPtr from config to main applet class
+  * FIX applet size bug
+  * Changed accountPtr retrieval method
+  * Added check on null pointer
+  * first layout for porting
+  * added wrapper to be used to communicate with QML plasmoid
+  * little tidy up for review
+  * Plasmoid is installable and base for QML has been layed out
+  * add username on top of plasmoid
+  * add context menu for presence changing
+  * Add contact list and account manager context actions to context menu
+  * Fixed memory leak craeted by actions
+  * Made the plasmoid as simple as can be
+  * Ported plasmoid to use telepathy-qt 0.8.9
+  * Reorganized context menu actions
+  * Add tooltip with user presence message
+  * Presence is set when account actually changes it's presence
+  * add config dialog to set custom "onClick" command for the plasmoid
+
+  [ Christophe Giboudeaux ]
+  * Missing new line GIT_SILENT
+
+  [ David Edmundson ]
+  * Hack in drag + drop support
+  * Switch to using common telepathy submodule
+  * Use includes from KTp not KTelepathy
+  * Use ConnectionStatus to determine when connecting or not.
+  * Update qml to load the correct lib
+  * Fix metadata.desktop to load the right plasmoid
+  * Fix metadata file again.
+  * Use our contact model, rather than nepomuk
+  * Add flat model proxy
+  * Fix quotes being escaped in plasmoid view by setting style as rich text
+  * Fix crash, initialise models at the start. Removed code duplication of FlatProxyModel.
+  * Don't randomly call init twice, it's called by plasma. We shouldn't do it ourselves.
+  * Make the scrolling act sensibly for the desktop
+  * Remove unused nonsense
+  * Remove pointless code, and broken resizing
+  * Split into QML plugin and QML plasmoid
+  * Do delegates properly
+  * Remove broken toolbar and grid view
+  * Add a scrollbar
+  * Working sorting + filtering
+  * Ability to start chats
+  * Properly set aspect ratio
+  * Remove traces of submodule
+  * Move to subdirectory
+  * Fix compiles
+  * Port delegate to plasma listItem
+  * Show presence icon (currently always online)
+  * Working filtering, and working highlights
+  * Replace plasmaWidgets.iconWidget with QIconItem
+  * add newline char to end of qml files
+  * add missing license files
+  * bump version to 0.4.1
+  * Rename contact list applet to say "instant messaging" rather than telepathy
+  * Update comment
+  * Elide contact alias properly
+  * Use attached properties to get model data
+  * Show ToolButton in compact respentation pressed whilst the popup is open
+  * Set plasmoid state to Passive if a user has no accounts.
+  * Set plasmoid state to Passive if a user has no accounts.
+  * Only set minimum size when not in a panel
+  * Remove DbusExporter class, only register service name.  Ref count usages to know when to remove.
+  * Update AccountsModel to renamed ContactsModel
+  * Match latest library
+  * Remove duplicate code
+  * Phase out use of ContactModelItem
+  * Show status as "busy" only when connecting and not when changing presence
+  * bump version to 0.5.2
+  * Bump version to 0.5.2
+  * Update to 0.5.2
+  * Restore Messages.sh file for presence applet
+  * Compile against newest common-internals
+  * Use against new models
+  * Add contact delegate
+  * Use correct display role for contact alias's
+  * Update version to 0.5.3
+  * Make sure the input component gets the focus
+  * Use PlasmaExtras ScrollArea rather than having our own scrollbar
+  * Fix crash in contact applet
+  * Whitespace fixes
+  * Show request presence in presence applet rather than current
+  * Don't add pointless margin to presence applet
+  * Keyboard shortcut activated contact list
+  * Fix Join Chat Room Dialog from presence applet context menu
+  * Remove unused files
+  * Don't set a size for the contact list
+  * update cmake policy
+  * Use Contact::AvatarPixmap rather than avatar path for displaying
+  * Bump version to 0.6.0
+  * Remove unused file
+  * Update to renamed roles
+  * Port contact list applet to new API
+  * Port Chat applet to new declarative API
+  * Bump to 0.6.2
+  * Do not close invalid channels
+  * Show warning and disable text input when channel is not connected
+  * Fix bad merge in 25600761e77e8296f7a232117b7413afddfa338c
+  * bump version to 0.6.3
+  * Bump Version to 0.6.80
+  * Bump version to 0.7.1
+  * Don't crash in Contact Applet capability check
+  * Bump version to 0.8.1
+  * Automatically load on MissionControl being available
+  * Use new icons in the system tray
+  * Fix compile on latest plasma
+  * Bump version to 0.8.80
+
+  [ Martin Klapetek ]
+  * Bump version to 0.2.60
+  * Use "IM Contact" as the applet name
+  * Use consistent icons
+  * Remove useless bool vars from loops, improves code readibility. Also replace qDebug with kDebug
+  * Stay consistent and use "Instant Messaging" instead of "IM".
+  * Code readability
+  * Don't use features that are not needed. Some code polish.
+  * Unbreak the plasmoid config by returning FeatureRoster and FeatureRosterGroups into loaded features. These are used in the config dialog.
+  * Improvements
+  * Add DBus exporter
+  * Move the DBusExporter class to .h as otherwise it breaks moc things and does not work
+  * Rename contact applet according to the new policy
+  * Simplify the name
+  * Set "Open Contact List" as default onClick action
+  * Fix the context menu entries which got broken by my latest commit
+  * Compile
+  * Add missing FindKTp.cmake
+  * Fix compile by setting correct include dirs
+  * Make the initial size bigger
+  * Use PlasmaComponents.Label instead of Text
+  * Make constructor explicit
+  * Fix spelling
+  * Change from Plasma::PopupApplet to Plasma::Applet and use Plasma::IconWidget for the icon
+  * Rename Config to AppletConfig class to avoid confusions with config.h and make krazy happy
+  * Bump versions to 0.4
+  * Bump version to 0.4
+  * Bump version to 0.4 and change icon and category
+  * Relicence the code under LGPLv2.1+
+  * Bump version to 0.5
+  * Bump version to 0.5
+  * Bump version to 0.5
+  * Show busy indicator over the icon when connecting
+  * Bump version to 0.5.1
+  * Bump version to 0.5.1
+  * Bump version to 0.5.1
+  * Move plasmoids versions to CMakeLists.txt, bump version to 0.5.80 (0.6-beta1)
+  * Fix awkward typo
+  * Don't block Plasma while showing join chat room dialog
+  * Add elipsis to "Join Chat Room" item
+  * Open & close contact list when clicking the presence plasmoid
+  * Use status message from the passed presence
+  * Bump version to 0.6.1
+  * Bump version to 0.7.80
+  * Bump the version to 0.8.0
+  * [contactlist] Put back the presence name into the tooltip
+  * personId got renamed to personUri in KPeople
+  * [person] Also update the config var to personUri
+  * [person] Improve the Person applet config page
+  * [person] Improve the Person applet itself
+  * [person] Fix the metadata.desktop file
+  * [person] Store in General rather Appearance category
+  * [contactlist] Clear the filter after starting a chat
+  * [person] Adopt the same structure as the other applets
+  * Include full applet name in the installed metadata.desktop names
+  * Remove double // from install paths
+  * Bump version to 0.9.80
+  * Use the same icon for contact list as contact list has
+  * Remove duplicated X-KDE-PluginInfo-Name key
+  * Add missing Messages.sh
+  * Bump the version to 15.03.95
+  * [contactlist] The signal name was changed, adapt
+  * Bump version to 15.04.0
+  * [contactlist] Add "Configure..." button when no accounts are set
+  * [contactlist] Properly capitalize strings
+  * Bump version to 15.04.1
+  * [contactlist] Remove unused component
+  * Set versioning to be handled by the release script
+
+  [ Dario Freddi ]
+  * Port to new KTelepathy internal library
+  * Fix include paths
+  * port-to-0.9: Remove deprecated Find file
+  * port-to-0.9: Rename relevant include paths and variables
+  * port-to-0.9: Bump tp-qt requirement
+  * Rename according to the new policy
+  * s/telepathy-contact/ktp-contact
+
+  [ George Kiagiadakis ]
+  * Add Messages.sh
+  * Actually name the pot file after the pot naming rules.
+  * Fix plugin name.
+  * Bump version to 0.3
+  * Rename to plasma_applet_ktp_presence, to follow the plasma applet naming policy and to fix translation catalog loading.
+  * Remove unused dependency.
+  * Fix the preferred text handler service name.
+  * Update to the new AddContactDialog API
+  * Add "Make a Call" action.
+
+  [ Alin M Elena ]
+  * use the correct name for accounts kcm
+  * use the correct icon for Account Manager
+  * Replaced kopete icons webcamsend and voicecall with oxygen ones camera-web and audio-headset
+
+  [ Dominik Cermak ]
+  * Update to use aysnc setting of account manager in account model creation.
+  * Load the correct icon for tooltip
+
+  [ Lasath Fernando ]
+  * Tidied code
+  * Added a LineEdit to the plasmoid and a sendNewMessage slot to ConversationModel. Also made the ListView auto-scroll
+  * Created a ConversationsModel class that contains a list of Active Conversations. Changed plasmoid to display said list.
+  * Added a dialog
+  * UI improvements
+  * Fixed binding loop for ConversationDelegate.size
+  * Further work on chat plasmoid
+  * Made Conversation inherit Queable and made the chat plasmoid in QML to get it to popout properly.
+  * Made ConversationQueManager use d-pointers. Made MessagesModel Queable instead of Conversation, and updated the ui accordingly.
+  * Fixed the metadata file for the plasmoid.
+  * Removes property ConversationTarget::presenceIconSource
+  * Rename Conversation::model to Conversation::messages
+  * The Delegate Channels Patch a.k.a David's massive patch
+  * Re-create binding to acknowledge messages when popup opens
+  * Make header text in chat area bold
+  * Change Alignment of text in chat area to make messages easier to see
+  * Make plasmoid render outgoing messages in Plasma::Theme::highlightColor color
+  * Hide message header in chatArea if sequential message
+  * Create new Delegates for different types of messages
+  * Replace TextDelegate with the new Delegates
+  * Make popup stay visible even after it looses focus.
+  * Make clicked links in chat actually open
+
+  [ Rohan Garg ]
+  * Do not use CMake 2.8 just yet
+  * Do not use CMake 2.8 just yet
+  * Do not use CMake 2.8 just yet
+  * Add a COPYING.LIB that specifies the LGPL-2.1+ text
+
+  [ Mikhail Krishtop ]
+  * Add "Add Contact" action
+
+  [ Aleix Pol ]
+  * Simplify some bits of the chat plasmoid's code
+  * Tries to address a few problems the chat view has and simplifies the code (a tiny bit).
+  * Rename the MultiChat plasmoid to "Quick Chat"
+  * Use ToolButton instead of Button.
+  * Improve size managing in the Chat Plasmoid
+  * Improve and simplify Chat Delegates
+  * Small adjustments to the Chat Plasmoid.
+  * Don't hijack the click event on the TextDelegate
+  * QuickChat Plasmoid: remove loop dependencies in visible state
+  * Make the minimize button a separate button
+  * Improve behavior while chatting
+  * Fix scrolling
+  * Fix scrolling
+  * import Qt 4.7 -> QtQuick 1.1
+  * Mark properties as constant
+  * Make it possible to start chats within the plasmoid
+  * General fix&clean in contact list
+  * Properly set what we're sorting by, after the changes in common-internals
+  * Remove warning
+  * On plasmoid activate, jump to the next active conversation
+  * Resolve the state in case the plasmoid is square
+  * Catch all cases where the window is hidden
+  * First attempt to make popup placement a bit smarter
+  * Fix hovering contact buttons
+  * Cache all the conversation in the ListView
+  * Clean up the code now that we sorted out the conversation closing
+  * Move the ContactPin instance where it belongs
+  * Signal not needed anymore
+  * Figure out the chat plasmoid state
+  * Improve behavior on smaller sizes
+  * There's not such handler.conversations.count
+  * Adopt the FilteredPinnedContactsProxyModel
+  * Remove unused identifier
+  * Make it possible to send files
+  * Chat plasmoid: Improve placement of the dialog
+  * Chat plasmoid: Polish sizes
+  * Small code cleanup
+  * Fix change on current conversation
+  * Fix placing of the dialog when starting from the pinned contacts
+  * Simplify the behavior of the main UI file in the chat plasmoid
+  * Oops!
+  * Correctly set the focus to the input field when the conversation opens
+  * Change the step size of the chat dialog scroll bar
+  * Insist in setting the focus in the input field
+  * Don't hardcode the scrollbar width
+  * Properly compute the edge where to put the dialog
+  * Improve integration with hiding panels
+  * Close the chat widget when the connection is invalidated
+  * These lines shouldn't have been changed in a prior commit
+  * Make sure closing a dialog doesn't close other dialogs
+  * Improve integration with hiding panels
+  * Close the chat widget when the connection is invalidated
+  * These lines shouldn't have been changed in a prior commit
+  * Make sure closing a dialog doesn't close other dialogs
+  * Properly place the tooltip
+  * Add visual feedback while dragging over the delegate
+  * Remove dead code
+  * Use the sender alias instead of the senderId
+  * Use the telepathy manager using telepathyManager
+  * The handler doesn't work, we use the conversationsModel now
+  * Make sure we unresgister the client before closing
+  * Don't check if it's moving to follow the conversation
+  * Chat Plasmoid: Small usability tweaks
+  * Use the contentHeight instead of the count property.
+  * Fix hovering the delegate button
+  * Remove unneeded margin
+  * Usability improvements in the ContactList
+  * Small code cleanup
+  * Remove the scrollbar from the ChatWidget
+  * Prefer Qt.openUrlExternally over plasmoid.openUrl
+  * Improve communication between the Messages and the UI
+  * Make the Plasmoids "startable" on plasma 2
+  * Fix placement of the dialogs
+  * Adapt to changes to the new activated signal in plasmaquick
+  * Properly set the size hints according to the Plasma 2 idioms
+  * Add missing license statement on one of the new files
+  * Make sure the contact list works fine on Plasma2
+  * Make the plasmoid display an icon when on compact representation
+  * Make it possible to set the current presence
+  * Add the rest of the actions for the new contact list plasmoid
+  * Add a TODO
+  * Remove pointless code
+  * Fix fixme :D
+  * Fix display of the chat dialogs
+  * Remove deprecated statement
+  * Adds a workaround to improve keyboard navigation on the contact list plasmoid
+  * New name for the ContactList plasmoid
+  * Activate the dialog when displaying it
+  * 50-renameKTpApplets.js doesn't make sense anymore
+  * Adapt to changes in plasma-framework
+  * Shring contact list after triggering to open a conversation
+  * Remove misleading comment
+  * Port property to Qt5
+  * Show the contactlist as a notification area plasmoid
+  * Add a "Go online" button when offline
+  * Make the offline view a bit nicer
+  * Small visual improvements
+  * Add a chat plasmoid action that clears all the conversations at once.
+  * Use all the space available to show the log
+  * Use gridUnit for the chat dialog size
+  * Use QtQuick DropArea component
+  * Make the plasmoid integrate better in the panel by using the taskbar look
+  * Re-implement the tooltip on the plasmoid again
+  * Re-work the conversation toolbar
+  * Provide a person plasmoid based on KPeople
+  * Remove presence plasmoid as it's not integrated with the contactlist
+  * Fix warning
+  * Fix icon on the tooltip hovering a conversation
+  * Remove workaround
+  * Create a qml plugin for chat-specific stuff
+  * Port pinned contact bits to plasma5 idioms
+  * Iterate over pins
+  * Clean up the pinned contact button
+  * Fix capitalization
+  * Polishing
+
+  [ Michael Bohlender ]
+  * Add tooltip to quick chat plasmoid
+
+  [ Othmane Moustaouda ]
+  * Added "Join Chat Room" button
+
+  [ Teemu Rytilahti ]
+  * Add missing ellipsis ("...") for actions which open up a dialog.
+
+  [ Peter Amidon ]
+  * Added plasma-themeability to the presence applet.
+  * Added plasma-themeability to the presence applet.
+  * Add plasma-themeability to the menu on the presence applet
+
+  [ Dan Vrátil ]
+  * Move declarative-plugin to ktp-common-internals
+  * Move applet to their folders and normalize naming
+  * Add chat plasmoid to build system
+  * Add presence applet to CMakeLists
+  * Add Plasma script to update plasma-desktop configuration
+  * Port to KTp::Actions
+  * Fix Messages.sh
+  * Expand group on single click, confirm config dialog on double click
+  * Fix contact applet name
+  * Make ContactList applet a PopupApplet
+  * Use KTp::ContactGridDialog for Contact applet configuration instead of custom UI
+  * Make it possible to send email from contact applet even when contact is offline
+
+  [ Andrea Scarpino ]
+  * Port to KTp::Actions
+
+  [ Emil Sedgh ]
+  * Its named 'plasmoid.status', not 'plasmoid.state'. CBUG:296928
+  * A more keyboard-friendly contact-list with a search filter.
+
+  [ l10n daemon script ]
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file) - always resolve ours
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file) - always resolve ours
+  * SVN_SILENT made messages (.desktop file) - always resolve ours
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file) - always resolve ours
+  * SVN_SILENT made messages (.desktop file) - always resolve ours
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file) - always resolve ours
+  * SVN_SILENT made messages (.desktop file) - always resolve ours
+  * SVN_SILENT made messages (.desktop file) - always resolve ours
+  * SVN_SILENT made messages (.desktop file) - always resolve ours
+  * SVN_SILENT made messages (.desktop file) - always resolve ours
+  * SVN_SILENT made messages (.desktop file) - always resolve ours
+  * SVN_SILENT made messages (.desktop file) - always resolve ours
+  * SVN_SILENT made messages (.desktop file) - always resolve ours
+  * SVN_SILENT made messages (.desktop file)
+  * SVN_SILENT made messages (.desktop file)
+
+  [ Siddhartha Sahu ]
+  * Add custom status to plasmoid context menu in systray
+  * Use PresenceModel from K-C-I
+  * Use SettingsKcmDialog from K-C-I
+  * Limit no. of characters of custom status displayed in context menu
+
+  [ Weng Xuetian ]
+  * partly revert 3b7a541d1ef8634b336ba9bd64a70dc4cc7027c3
+
+  [ Alexandr Akulich ]
+  * Refactor of Contact plasmoid
+  * Contact: Implemented audio/video calls
+  * QuickChat: Enable word wrap for actions text.
+  * Contact: Implemented files transfer by appropriate button.
+  * Contact: Implemented files transfer by drag'n'drop.
+  * Contact: Partially port ContactWrapper to newer API.
+
+  [ Leon Handreke ]
+  * Use Conversation model properties instead of ConversationTarget
+
+  [ James Smith ]
+  * Use requestedPresence over currentPresence for showing presence
+
+  [ Vishesh Handa ]
+  * ContactList: Set highlightMoveDuration to 0
+  * ContactList: Make the highlight follow the mouse cursor
+
+  [ Kai Uwe Broulik ]
+  * Make contactlist applet belong to Communcations category
+  * Remove Raised style for hover
+
+  [ Igor Poboiko ]
+  * Search also for offline contacts in contactlist applet
+
+  [ Albert Astals Cid ]
+  * GIT_SILENT Upgrade KDE Applications version to 15.11.80.
+  * GIT_SILENT Upgrade KDE Applications version to 15.11.90.
+  * GIT_SILENT Upgrade KDE Applications version to 15.12.0.
+  * GIT_SILENT Upgrade KDE Applications version to 15.12.1.
+  * GIT_SILENT Upgrade KDE Applications version to 15.12.2.
+  * GIT_SILENT Upgrade KDE Applications version to 15.12.3.
+
+  [ Automatic packaging ]
+  * upstream branch
+  * Bump Standards-Version to 3.9.8
+  * Refresh patches
+
+ -- George Goldberg <grundleborg@googlemail.com>  Wed, 13 Apr 2016 20:23:46 +0200
 
 ktp-desktop-applets (15.12.1-1) experimental; urgency=medium
 
