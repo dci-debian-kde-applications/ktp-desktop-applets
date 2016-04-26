@@ -1,6 +1,6 @@
-ktp-desktop-applets (15.12.3-1~1.gbpffeb33) UNRELEASED; urgency=medium
+ktp-desktop-applets (16.04.0-1~1.gbp45bbba) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @ffeb33700ed36523f0889c42ec9dcbce42d96cca **
+  ** SNAPSHOT build @45bbbae188e03f0b7c5723882e197581fcd48115 **
 
   [ Maximiliano Curia ]
   * New upstream release (15.12.2).
@@ -963,8 +963,9 @@ ktp-desktop-applets (15.12.3-1~1.gbpffeb33) UNRELEASED; urgency=medium
   * upstream branch
   * Bump Standards-Version to 3.9.8
   * Refresh patches
+  * Add a .gitattributes file to use dpkg-mergechangelogs
 
- -- George Goldberg <grundleborg@googlemail.com>  Wed, 13 Apr 2016 20:23:46 +0200
+ -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Tue, 26 Apr 2016 19:06:12 +0200
 
 ktp-desktop-applets (15.12.1-1) experimental; urgency=medium
 
