@@ -1,10 +1,8 @@
-ktp-desktop-applets (16.04.2-1~1.gbpde83ac) UNRELEASED; urgency=medium
+ktp-desktop-applets (16.04.2-1) experimental; urgency=medium
 
-  ** SNAPSHOT build @de83ac5438e644d793dba7bf6295db08f6015764 **
+  * New upstream release.
 
-  * UNRELEASED
-
- -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Wed, 15 Jun 2016 05:43:11 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 24 Jun 2016 09:39:03 +0200
 
 ktp-desktop-applets (16.04.1-1) experimental; urgency=medium
 
