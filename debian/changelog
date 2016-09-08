@@ -1,11 +1,12 @@
-ktp-desktop-applets (16.08.0-1~1.gbpcb3e34) UNRELEASED; urgency=medium
+ktp-desktop-applets (16.08.1-1~1.gbp12771a) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @cb3e3469eac07c1d1ade1e3e8cea100b3ac8d988 **
+  ** SNAPSHOT build @12771a8eaaf4fad6d9b5c8d0599fc13adb4d6280 **
 
   * UNRELEASED
   * UNRELEASED
+  * UNRELEASED
 
- -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Thu, 18 Aug 2016 23:43:13 +0200
+ -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Thu, 08 Sep 2016 23:43:36 +0200
 
 ktp-desktop-applets (16.04.2-1) experimental; urgency=medium
 
