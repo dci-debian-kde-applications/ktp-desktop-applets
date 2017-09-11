@@ -21,6 +21,7 @@
 import QtQuick 2.1
 import org.kde.telepathy 0.1 as KTp
 import org.kde.plasma.plasmoid 2.0
+import org.kde.ktpcontactlist 0.1 as KTpContactList
 
 Item
 {
@@ -30,14 +31,19 @@ Item
     Plasmoid.switchHeight: 300
 
     Plasmoid.fullRepresentation: ContactList {}
-    Plasmoid.compactRepresentation: Presence {
-        source: ktpPresence.currentPresenceIconName
-    }
 
+    Plasmoid.icon: ktpPresence.currentPresenceIconName
     Plasmoid.busy: ktpPresence.isChangingPresence
+
+    KTpContactList.RegisterContactApplet {
+        id: registerApplet
+    }
 
     KTp.PresenceModel {
         id: presenceModel
+        onCountChanged: {
+            buildMenu();
+        }
     }
 
     KTp.GlobalPresence {
@@ -52,6 +58,10 @@ Item
             updateTooltip();
         }
 
+        onIsChangingPresenceChanged: {
+            updateTooltip();
+        }
+
         onConnectionStatusChanged: {
             updateTooltip();
         }
@@ -59,7 +69,6 @@ Item
 
     function setPresence(row) {
         ktpPresence.requestedPresence = presenceModel.get(row, "presence");
-
     }
 
     function updateTooltip() {
@@ -75,11 +84,9 @@ Item
         }
     }
 
-    Component.onCompleted: {
-        telepathyManager.addContactListFeatures();
-        telepathyManager.becomeReady();
-
-        //TODO: The PresenceModel might change, this will never react to such changes
+    function buildMenu() {
+        // remove any already existing actions
+        plasmoid.clearActions();
         for(var i=0; i<presenceModel.count; ++i) {
             var disp = presenceModel.get(i, "display");
             var actionName = i;
@@ -102,6 +109,13 @@ Item
             plasmoid.setAction("sendFile", i18n("Send a File..."), "mail-attachment");
         }
         plasmoid.setActionSeparator("actions");
+    }
+
+    Component.onCompleted: {
+        telepathyManager.addContactListFeatures();
+        telepathyManager.becomeReady();
+
+        buildMenu();
     }
 
     function action_dial() { telepathyManager.openDialUi(); }

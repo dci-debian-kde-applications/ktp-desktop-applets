@@ -19,6 +19,12 @@
 #include <QQmlExtensionPlugin>
 #include <qqml.h>
 #include "hide-window-component.h"
+#include "htmlhelper.h"
+
+static QObject *htmlHelper_singleton_provider(QQmlEngine *, QJSEngine *)
+{
+    return new HtmlHelper();
+}
 
 class QmlPlugins : public QQmlExtensionPlugin
 {
@@ -29,6 +35,7 @@ class QmlPlugins : public QQmlExtensionPlugin
         virtual void initializeEngine(QQmlEngine */*engine*/, const char */*uri*/) {}
         virtual void registerTypes(const char *uri) {
             qmlRegisterType<HideWindowComponent>(uri, 0, 1, "HideWindowComponent");
+            qmlRegisterSingletonType<HtmlHelper>(uri, 0, 1, "HtmlHelper", htmlHelper_singleton_provider);
         }
 
 };
