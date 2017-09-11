@@ -1,15 +1,6 @@
 ktp-desktop-applets (17.08.1-1~) UNRELEASED; urgency=medium
 
-  [ Maximiliano Curia ]
-  ** SNAPSHOT build @12771a8eaaf4fad6d9b5c8d0599fc13adb4d6280 **
-
-  * UNRELEASED
-  * UNRELEASED
-  * UNRELEASED
   * New upstream release (17.08.1).
-
-  [ Automatic packaging ]
-  * Update changelog for 16.08.1-1~1.gbp12771a release
 
  -- Maximiliano Curia <maxy@debian.org>  Mon, 11 Sep 2017 15:58:57 +0200
 
