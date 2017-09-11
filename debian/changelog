@@ -1,12 +1,17 @@
-ktp-desktop-applets (16.08.1-1~1.gbp12771a) UNRELEASED; urgency=medium
+ktp-desktop-applets (17.08.1-1~) UNRELEASED; urgency=medium
 
+  [ Maximiliano Curia ]
   ** SNAPSHOT build @12771a8eaaf4fad6d9b5c8d0599fc13adb4d6280 **
 
   * UNRELEASED
   * UNRELEASED
   * UNRELEASED
+  * New upstream release (17.08.1).
 
- -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Thu, 08 Sep 2016 23:43:36 +0200
+  [ Automatic packaging ]
+  * Update changelog for 16.08.1-1~1.gbp12771a release
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 11 Sep 2017 15:58:57 +0200
 
 ktp-desktop-applets (16.04.2-1) experimental; urgency=medium
 
