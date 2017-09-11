@@ -1,8 +1,14 @@
-ktp-desktop-applets (17.08.1-1~) UNRELEASED; urgency=medium
+ktp-desktop-applets (17.08.1-1) experimental; urgency=medium
 
   * New upstream release (17.08.1).
+  * Drop soon to be deprecated fail-missing
+  * Bump Standards-Version to 4.1.0.
+  * Update upstream metadata
+  * Update build-deps and deps with the info from cmake
+  * Add breaks/replaces against the kde-l10n packages
+  * Release to experimental
 
- -- Maximiliano Curia <maxy@debian.org>  Mon, 11 Sep 2017 15:58:57 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 11 Sep 2017 19:59:10 +0200
 
 ktp-desktop-applets (16.04.2-1) experimental; urgency=medium
 
