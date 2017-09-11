@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-07 03:53+0100\n"
+"PO-Revision-Date: 2017-08-31 05:17-0400\n"
+"Last-Translator: guoyunhebrave <guoyunhebrave@gmail.com>\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-stable/messages/kdenetwork/plasma_applet_org.kde.ktp-"
+"contactlist.pot\n"
+
+#: org.kde.ktp-contactlist/contents/ui/ContactList.qml:51
+#, kde-format
+msgid "It appears that you do not have any accounts configured"
+msgstr "看起来您没有配置账户"
+
+#: org.kde.ktp-contactlist/contents/ui/ContactList.qml:61
+#, kde-format
+msgid "Configure Now..."
+msgstr "现在配置..."
+
+#: org.kde.ktp-contactlist/contents/ui/ContactList.qml:81
+#, kde-format
+msgid "Go Online"
+msgstr "转为在线"
+
+#: org.kde.ktp-contactlist/contents/ui/ContactList.qml:98
+#, kde-format
+msgid "Search Contacts..."
+msgstr "搜索联系人..."
+
+#: org.kde.ktp-contactlist/contents/ui/main.qml:77
+#, kde-format
+msgctxt "Means 'Connecting your IM accounts', it's in the applet tooltip"
+msgid "Connecting..."
+msgstr "正在连接..."
+
+#: org.kde.ktp-contactlist/contents/ui/main.qml:80
+#, kde-format
+msgctxt ""
+"The arg is the presence name (as is in ktp-common-internals.po, eg. Changing "
+"Presence to Away..., it's in the applet tooltip"
+msgid "Changing Presence to %1..."
+msgstr "更改状态为 %1..."
+
+#: org.kde.ktp-contactlist/contents/ui/main.qml:98
+#, kde-format
+msgid "Instant Messaging Settings..."
+msgstr "即时通讯设置..."
+
+#: org.kde.ktp-contactlist/contents/ui/main.qml:99
+#, kde-format
+msgid "Contact List..."
+msgstr "联系人列表..."
+
+#: org.kde.ktp-contactlist/contents/ui/main.qml:102
+#, kde-format
+msgid "Add New Contacts..."
+msgstr "添加新联系人..."
+
+#: org.kde.ktp-contactlist/contents/ui/main.qml:103
+#, kde-format
+msgid "Join Chat Room..."
+msgstr "加入聊天室..."
+
+#: org.kde.ktp-contactlist/contents/ui/main.qml:106
+#, kde-format
+msgid "Make a Call..."
+msgstr "进行呼叫..."
+
+#: org.kde.ktp-contactlist/contents/ui/main.qml:109
+#, kde-format
+msgid "Send a File..."
+msgstr "发送文件..."

@@ -22,12 +22,15 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 PlasmaComponents.Label {
     id: body
+
+    signal contextMenuRequested(int x, int y)
+
     wrapMode: Text.Wrap
     width: view.width
 
     text: model.text
     textFormat: Text.RichText
-    height: paintedHeight
+    height: undefined
 
     onLinkActivated: {
         console.log("opening link: " + link);
@@ -36,6 +39,7 @@ PlasmaComponents.Label {
 
     //Hover to display the time when hovering a message
     PlasmaComponents.Label {
+        height: undefined
         text: Qt.formatTime(model.time)
         anchors {
             top: parent.top
@@ -55,7 +59,7 @@ PlasmaComponents.Label {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: true
-        //we just want to know if the mouse is there, otherwise prevents links from being clicked
-        acceptedButtons: Qt.NoButton
+        acceptedButtons: Qt.NoButton | Qt.RightButton
+        onClicked: body.contextMenuRequested(mouse.x, mouse.y)
     }
 }
